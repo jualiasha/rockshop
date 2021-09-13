@@ -1,0 +1,41 @@
+.rock {
+  display: block;
+  max-width: 12.5rem;
+  max-height: 17.5rem;
+
+  padding: 2vh 1vw;
+  border-radius: $borderRadius;
+  .background {
+    background-color: $lightgrey;
+    opacity: 0.5;
+  }
+  .price {
+    font-weight: 700;
+    text-align: center;
+  }
+  .buttoncontainer {
+    display: flex;
+    justify-content: space-around;
+    &__counter {
+      text-align: center;
+      background-color: $lightgrey;
+      border: 1px solid $charlston;
+      padding: 0.5vw;
+      width: 5vw;
+      color: $charlston;
+      border-radius: $borderRadius;
+      -webkit-border-radius: $borderRadius;
+      -moz-border-radius: $borderRadius;
+      -ms-border-radius: $borderRadius;
+      -o-border-radius: $borderRadius;
+    }
+    &__cart {
+      background-color: $buttonbackground;
+      color: $buttoncolor;
+      border-radius: $borderRadius;
+      width: 5vw;
+      text-align: center;
+      padding-top: 0.5vh;
+    }
+  }
+}

@@ -9,9 +9,14 @@ html {
 }
 
 body {
+  background-image: $backgroundimage;
   background-color: $backgroundcolor;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 32%;
+  background-size: 1785px;
   color: $black;
-
+  font-family: $roboto;
   font-size: 1.25rem;
 }
 
@@ -50,4 +55,10 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+}
+
+h3 {
+  color: $davysgrey;
+  text-transform: uppercase;
+  text-align: center;
 }

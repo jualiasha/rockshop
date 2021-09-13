@@ -1,8 +1,22 @@
 /*Fonts*/
+$courierprime: "Courier Prime", monospace;
+$roboto: "Roboto", sans-serif;
+
 /*Primary Colors*/
 $white: #fff;
-$backgroundcolor: $white;
 $black: #000;
+$charlston: #212529;
+$davysgrey: #495057;
+$lightgrey: #ced4da;
+$cultured: #f8f9fa;
+
+/*Backgrounds*/
+$backgroundimage: url("https://res.cloudinary.com/dmccp7nci/image/upload/v1631526796/raphael-koh-aiKyJ6rHCP4-unsplash_qgckez.jpg");
+$backgroundcolor: $charlston;
+
 /*Buttons*/
+$buttonbackground: $charlston;
+$buttoncolor: $cultured;
+
 /*Borders*/
-/*Shadows*/
+$borderRadius: 5px;

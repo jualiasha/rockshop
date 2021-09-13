@@ -1,15 +1,61 @@
 header {
-  margin-bottom: 2vh;
-  display: flex;
-  justify-content: space-between;
-  padding: 2vw;
+  .toppanel {
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw;
+  }
+  .cartbox {
+    display: flex;
+    .counter {
+      display: block;
+      text-align: center;
+      background-color: $white;
+      border-radius: $borderRadius;
+      -webkit-border-radius: $borderRadius;
+      -moz-border-radius: $borderRadius;
+      -ms-border-radius: $borderRadius;
+      -o-border-radius: $borderRadius;
+      padding: 0.5vw;
+      width: 5vw;
+      height: 6vh;
+    }
+  }
+
+  .logo {
+    color: $cultured;
+    font-weight: 700;
+    font-family: $courierprime;
+    font-size: 3rem;
+  }
+  .menuicon {
+    background-color: $white;
+    height: 2.5rem;
+    border-radius: $borderRadius;
+    -webkit-border-radius: $borderRadius;
+    -moz-border-radius: $borderRadius;
+    -ms-border-radius: $borderRadius;
+    -o-border-radius: $borderRadius;
+  }
 }
 
 nav {
-  ul {
-  }
+  background-color: $cultured;
+  max-width: 96%;
+  padding: 2vh 0;
+  position: absolute;
+  top: 11vh;
+  left: 2vw;
+  width: 100%;
+  border-radius: $borderRadius;
+  -webkit-border-radius: $borderRadius;
+  -moz-border-radius: $borderRadius;
+  -ms-border-radius: $borderRadius;
+  -o-border-radius: $borderRadius;
+  opacity: 0.9;
   li {
     display: inline-block;
     margin-left: 2vw;
+    font-family: $courierprime;
   }
 }
