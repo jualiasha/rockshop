@@ -4,9 +4,8 @@ import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 const ProductCard = ({ name, price, amount, src }) => {
   return (
     <div className="rock">
-      <div className="background"></div>
       <h3>{name}</h3>
-      <img src={src}></img>
+      <img src={src} alt={name}></img>
       <p className="price">{price}€</p>
       <div className="buttoncontainer">
         <div className="buttoncontainer__counter">{amount}</div>
