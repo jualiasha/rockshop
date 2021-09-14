@@ -1,19 +1,22 @@
 .rock {
   display: block;
-  max-width: 12.5rem;
-  max-height: 17.5rem;
-  background-color: rgba(206, 212, 218, 0.5);
+  width: 12.5rem;
+  height: 17.5rem;
+  background-color: rgba(206, 217, 218, 0.6);
   padding: 2vh 1vw;
   border-radius: $borderRadius;
   margin-right: 2vw;
+  &:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
   img {
     border-radius: $borderRadius;
     -webkit-border-radius: $borderRadius;
     -moz-border-radius: $borderRadius;
     -ms-border-radius: $borderRadius;
     -o-border-radius: $borderRadius;
-    max-width: 150px;
-    max-height: 170px;
+    width: 150px;
+    height: 170px;
     object-fit: cover;
     display: block;
     margin: 0 auto;

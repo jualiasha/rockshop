@@ -6,45 +6,234 @@
     {
       "id": 1,
       "name": "basalt",
-      "category": "igneousrocks",
+      "category": "Igneous rocks",
       "src": "/stones/igneousrocks/basalt.jpg",
-      "price": 5
+      "price": 5,
+      "quantity": 120,
+      "description": "Super rock with Lorem Ipsum"
     },
     {
       "id": 2,
       "name": "gabbro",
-      "category": "igneousrocks",
+      "category": "Igneous rocks",
       "src": "/stones/igneousrocks/gabbro.jpg",
-      "price": 5
+      "price": 5,
+      "quantity": 100,
+      "description": "Super rock with Lorem Ipsum"
     },
     {
       "id": 3,
       "name": "granite",
-      "category": "igneousrocks",
+      "category": "Igneous rocks",
       "src": "/stones/igneousrocks/granite.jpg",
-      "price": 5
+      "price": 5,
+      "quantity": 50,
+      "description": "Super rock with Lorem Ipsum"
     },
     {
       "id": 4,
       "name": "obsidian",
-      "category": "igneousrocks",
+      "category": "Igneous rocks",
       "src": "/stones/igneousrocks/obsidian.jpg",
-      "price": 5
+      "price": 5,
+      "quantity": 20,
+      "description": "Super rock with Lorem Ipsum"
     },
     {
       "id": 5,
       "name": "pumice",
-      "category": "igneousrocks",
+      "category": "Igneous rocks",
       "src": "/stones/igneousrocks/pumice.jpg",
-      "price": 5
+      "price": 5,
+      "quantity": 70,
+      "description": "Super rock with Lorem Ipsum"
     },
     { "productCategory": "Metamorphic Rocks" },
     {
       "id": 6,
       "name": "gneiss",
-      "category": "igneousrocks",
+      "category": "Metamorphic rocks",
       "src": "/stones/metamorphicrocks/gneiss.jpg",
-      "price": 5
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 7,
+      "name": "marble",
+      "category": "Metamorphic rocks",
+      "src": "/stones/metamorphicrocks/marble.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 8,
+      "name": "metaquartzite",
+      "category": "Metamorphic rocks",
+      "src": "/stones/metamorphicrocks/metaquartzite.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 9,
+      "name": "schist",
+      "category": "Metamorphic rocks",
+      "src": "/stones/metamorphicrocks/schist.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 10,
+      "name": "slate",
+      "category": "Metamorphic rocks",
+      "src": "/stones/metamorphicrocks/slate.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "productCategory": "Minerals"
+    },
+    {
+      "id": 11,
+      "name": "biotite",
+      "category": "Minerals",
+      "src": "/stones/minerals/biotite.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 12,
+      "name": "copper",
+      "category": "Minerals",
+      "src": "/stones/minerals/copper.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 13,
+      "name": "diamond",
+      "category": "Minerals",
+      "src": "/stones/minerals/diamond.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 14,
+      "name": "feldspar",
+      "category": "Minerals",
+      "src": "/stones/minerals/feldspar.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 15,
+      "name": "gold",
+      "category": "Minerals",
+      "src": "/stones/minerals/gold.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 16,
+      "name": "halite",
+      "category": "Minerals",
+      "src": "/stones/minerals/halite.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 17,
+      "name": "magnetite",
+      "category": "Minerals",
+      "src": "/stones/minerals/magnetite.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 18,
+      "name": "quartz",
+      "category": "Minerals",
+      "src": "/stones/minerals/quartz.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 19,
+      "name": "silver",
+      "category": "Minerals",
+      "src": "/stones/minerals/silver.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 20,
+      "name": "talc",
+      "category": "Minerals",
+      "src": "/stones/minerals/talc.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "productCategory": "Sedimentary Rocks"
+    },
+    {
+      "id": 21,
+      "name": "breccia",
+      "category": "Sedimentary Rocks",
+      "src": "/stones/sedimentaryrocks/breccia.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 22,
+      "name": "conglomerate",
+      "category": "Sedimentary Rocks",
+      "src": "/stones/sedimentaryrocks/conglomerate.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 23,
+      "name": "limestone",
+      "category": "Sedimentary Rocks",
+      "src": "/stones/sedimentaryrocks/limestone.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 24,
+      "name": "sandstone",
+      "category": "Sedimentary Rocks",
+      "src": "/stones/sedimentaryrocks/sandstone.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
+    },
+    {
+      "id": 25,
+      "name": "shale",
+      "category": "Sedimentary Rocks",
+      "src": "/stones/sedimentaryrocks/shale.jpg",
+      "price": 5,
+      "quantity": 10,
+      "description": "Super rock with Lorem Ipsum"
     }
   ]
 }

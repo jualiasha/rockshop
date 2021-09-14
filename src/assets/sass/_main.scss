@@ -12,9 +12,7 @@ body {
   background-image: $backgroundimage;
   background-color: $backgroundcolor;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 32%;
-  background-size: 1785px;
+  background-size: 100%;
   color: $black;
   font-family: $roboto;
   font-size: 1.25rem;
@@ -54,8 +52,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.25rem !important;
+  font-size: 2rem !important;
   color: $white;
+  font-family: $courierprime !important;
+  font-weight: 700;
+  text-align: center;
 }
 
 h3 {
