@@ -7,6 +7,7 @@ import { initializeProducts } from "../store/actions/productactions";
 
 const Home = () => {
   const products = useSelector((state) => state.products);
+  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -52,8 +53,13 @@ const Home = () => {
                     <ProductCard
                       name={product.name}
                       price={product.price}
-                      amount="0"
+                      amount={
+                        cart.items[product.id]
+                          ? cart.items[product.id].quantity
+                          : 0
+                      }
                       src={product.src}
+                      product={product}
                     />
                   )}
                 </Grid>
