@@ -6,9 +6,18 @@ import {
   reduceQuantity,
   removeProduct,
 } from "../store/actions/cartactions";
+import { messages } from "../utils/messages";
+import { addMessage } from "../store/actions/messageactions";
 
 const ProductCard = ({ name, price, amount, src, product }) => {
   const dispatch = useDispatch();
+  const handleClick = (product) => {
+    if (product.quantity === 0) {
+      dispatch(addMessage(messages.stock));
+    } else {
+      dispatch(addProduct(product));
+    }
+  };
   return (
     <div className="rock">
       <h3>{name}</h3>
@@ -19,9 +28,7 @@ const ProductCard = ({ name, price, amount, src, product }) => {
         <div className="buttoncontainer__cart">
           <AddShoppingCartIcon
             style={{ fontSize: 30 }}
-            onClick={() => {
-              dispatch(addProduct(product));
-            }}
+            onClick={() => handleClick(product)}
           />
         </div>
         <button onClick={() => dispatch(reduceQuantity(product))}>

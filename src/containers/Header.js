@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import Nav from "../components/Nav";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuHandler = () => {
     setMenuOpen(!menuOpen);
   };
+  const cart = useSelector((state) => state.cart);
 
   return (
     <header>
@@ -22,7 +24,7 @@ const Header = () => {
         </div>
         <div className="cartbox">
           <ShoppingCartIcon style={{ fontSize: 40 }} />
-          <div className="counter">100</div>
+          <div className="counter">{cart.totalQuantity}</div>
         </div>
       </div>
       {menuOpen ? <Nav click={menuHandler} /> : null}

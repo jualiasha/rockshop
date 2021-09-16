@@ -232,8 +232,9 @@
       "category": "Sedimentary Rocks",
       "src": "/stones/sedimentaryrocks/shale.jpg",
       "price": 5,
-      "quantity": 10,
+      "quantity": 0,
       "description": "Super rock with Lorem Ipsum"
     }
-  ]
+  ],
+  "cart": {}
 }
