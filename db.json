@@ -238,102 +238,26 @@
       "description": "Super rock with Lorem Ipsum"
     }
   ],
-  "cart": [
-    {
-      "1": {
-        "id": 1,
-        "name": "basalt",
-        "category": "Igneous rocks",
-        "src": "/stones/igneousrocks/basalt.jpg",
-        "price": 5,
-        "quantity": 1,
-        "description": "Super rock with Lorem Ipsum"
-      },
-      "id": 1
+  "cart": {
+    "1": {
+      "id": 1,
+      "name": "basalt",
+      "category": "Igneous rocks",
+      "src": "/stones/igneousrocks/basalt.jpg",
+      "price": 5,
+      "quantity": 120,
+      "description": "Super rock with Lorem Ipsum",
+      "cartQuantity": 2
     },
-    {
-      "1": {
-        "id": 1,
-        "name": "basalt",
-        "category": "Igneous rocks",
-        "src": "/stones/igneousrocks/basalt.jpg",
-        "price": 5,
-        "quantity": 2,
-        "description": "Super rock with Lorem Ipsum"
-      },
-      "id": 2
-    },
-    {
-      "3": {
-        "id": 3,
-        "name": "granite",
-        "category": "Igneous rocks",
-        "src": "/stones/igneousrocks/granite.jpg",
-        "price": 5,
-        "quantity": 1,
-        "description": "Super rock with Lorem Ipsum"
-      },
-      "id": 3
-    },
-    {
-      "3": {
-        "id": 3,
-        "name": "granite",
-        "category": "Igneous rocks",
-        "src": "/stones/igneousrocks/granite.jpg",
-        "price": 5,
-        "quantity": 2,
-        "description": "Super rock with Lorem Ipsum"
-      },
-      "id": 4
-    },
-    {
-      "3": {
-        "id": 3,
-        "name": "granite",
-        "category": "Igneous rocks",
-        "src": "/stones/igneousrocks/granite.jpg",
-        "price": 5,
-        "quantity": 3,
-        "description": "Super rock with Lorem Ipsum"
-      },
-      "id": 5
-    },
-    {
-      "2": {
-        "id": 2,
-        "name": "gabbro",
-        "category": "Igneous rocks",
-        "src": "/stones/igneousrocks/gabbro.jpg",
-        "price": 5,
-        "quantity": 1,
-        "description": "Super rock with Lorem Ipsum"
-      },
-      "id": 6
-    },
-    {
-      "2": {
-        "id": 2,
-        "name": "gabbro",
-        "category": "Igneous rocks",
-        "src": "/stones/igneousrocks/gabbro.jpg",
-        "price": 5,
-        "quantity": 2,
-        "description": "Super rock with Lorem Ipsum"
-      },
-      "id": 7
-    },
-    {
-      "1": {
-        "id": 1,
-        "name": "basalt",
-        "category": "Igneous rocks",
-        "src": "/stones/igneousrocks/basalt.jpg",
-        "price": 5,
-        "quantity": 1,
-        "description": "Super rock with Lorem Ipsum"
-      },
-      "id": 8
+    "2": {
+      "id": 2,
+      "name": "gabbro",
+      "category": "Igneous rocks",
+      "src": "/stones/igneousrocks/gabbro.jpg",
+      "price": 5,
+      "quantity": 100,
+      "description": "Super rock with Lorem Ipsum",
+      "cartQuantity": 1
     }
-  ]
+  }
 }

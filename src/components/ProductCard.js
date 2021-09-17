@@ -28,9 +28,6 @@ const ProductCard = ({ name, price, amount, src, product }) => {
             onClick={() => handleClick(product)}
           />
         </div>
-        <button onClick={() => dispatch(reduceQuantity(product))}>
-          Reduce
-        </button>
       </div>
     </div>
   );

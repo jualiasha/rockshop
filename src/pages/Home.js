@@ -55,7 +55,7 @@ const Home = () => {
                       price={product.price}
                       amount={
                         cart.items[product.id]
-                          ? cart.items[product.id].quantity
+                          ? cart.items[product.id].cartQuantity
                           : 0
                       }
                       src={product.src}

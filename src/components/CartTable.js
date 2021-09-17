@@ -1,37 +1,96 @@
 import * as React from "react";
-
+import { DeleteForever } from "@material-ui/icons";
+import { useDispatch, useSelector } from "react-redux";
 import {
   Table,
   TableBody,
   TableCell,
   TableContainer,
   TableRow,
-  Paper,
 } from "@material-ui/core";
+import { itemsToArray } from "../utils";
+import {
+  reduceQuantity,
+  removeProduct,
+  addProduct,
+} from "../store/actions/cartactions";
+import { messages } from "../utils/messages";
+import { addMessage } from "../store/actions/messageactions";
 
-export default function DenseTable({ products }) {
+export default function DenseTable() {
+  const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
+  let itemsArray = [];
+  itemsArray = itemsToArray(cart.items);
+
+  const handlePlusClick = (product) => {
+    if (product.quantity === 0) {
+      dispatch(addMessage(messages.stock));
+    } else {
+      dispatch(addProduct(product));
+    }
+  };
+
   return (
     <TableContainer>
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
         <TableBody>
-          {products.map((product) => (
+          {itemsArray.map((item) => (
             <TableRow
-              key={product.id}
+              key={item.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              <TableCell align="center" style={{ borderBottom: "unset" }}>
-                <img
-                  src={product.src}
-                  alt={product.name}
-                  className="cart__image"
-                />
-                <h4>{product.name}</h4>
-                <h4 className="cart__price">{product.price}€</h4>
+              <TableCell
+                align="center"
+                style={{ borderBottom: "1px solid #212529" }}
+              >
+                <img src={item.src} alt={item.name} className="cart__image" />
+                <h4>{item.name}</h4>
+                <h4 className="cart__price">{item.price}€</h4>
               </TableCell>
-              <TableCell align="center">{product.name}</TableCell>
-              <TableCell align="center">{product.category}</TableCell>
-              <TableCell align="center">{product.cartquantity}</TableCell>
-              <TableCell align="center">{product.price}</TableCell>
+              <TableCell
+                align="center"
+                style={{ borderBottom: "1px solid #212529" }}
+              >
+                <h4>{item.name}</h4>
+                <h5>{item.category}</h5>
+              </TableCell>
+              <TableCell
+                align="center"
+                style={{ borderBottom: "1px solid #212529" }}
+              >
+                <button
+                  className="cart__button"
+                  type="button"
+                  onClick={() => dispatch(addProduct(item))}
+                >
+                  +
+                </button>
+                <span className="cart__span">{item.cartQuantity}</span>
+                <button
+                  className="cart__button"
+                  type="button"
+                  onClick={() => dispatch(reduceQuantity(item))}
+                >
+                  -
+                </button>
+              </TableCell>
+              <TableCell
+                align="center"
+                style={{ borderBottom: "1px solid #212529" }}
+              >
+                <span className="cart__span"> {item.price}€</span>
+              </TableCell>
+              <TableCell
+                align="center"
+                style={{ borderBottom: "1px solid #212529" }}
+              >
+                <DeleteForever
+                  style={{ fontSize: 40 }}
+                  onClick={() => dispatch(removeProduct(item.id))}
+                />
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

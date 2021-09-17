@@ -1,11 +1,8 @@
 import * as actionTypes from "../actions/cartactions";
 import { reducer, itemsToArray } from "../../utils";
 import { addToCart } from "../../services/products";
-
-const cartreducer = (
-  state = { items: {}, totalPrice: 0, totalQuantity: 0 },
-  action
-) => {
+const DEFAULT_STATE = { items: {}, totalPrice: 0, totalQuantity: 0 };
+const cartreducer = (state = DEFAULT_STATE, action) => {
   let existingItem;
   let itemsArray = [];
 
@@ -16,28 +13,23 @@ const cartreducer = (
       existingItem = state.items[action.data.id];
       if (!existingItem && action.data.quantity) {
         existingItem = state.items[action.data.id] = {
-          id: action.data.id,
-          name: action.data.name,
-          category: action.data.category,
-          src: action.data.src,
-          price: action.data.price,
-          quantity: 1,
-          description: action.data.description,
+          ...action.data,
+          cartQuantity: 1,
         };
       } else {
-        if (existingItem.quantity === action.data.quantity) {
-          existingItem.quantity = action.data.quantity;
+        if (existingItem.cartQuantity === action.data.quantity) {
+          existingItem.cartQuantity = action.data.quantity;
         } else {
-          existingItem.quantity++;
+          existingItem.cartQuantity++;
         }
       }
       addToCart(state.items);
       itemsArray = itemsToArray(state.items);
       state.totalPrice = itemsArray
-        .map((item) => item.price * item.quantity)
+        .map((item) => item.price * item.cartQuantity)
         .reduce(reducer);
       state.totalQuantity = itemsArray
-        .map((item) => item.quantity)
+        .map((item) => item.cartQuantity)
         .reduce(reducer);
       return Object.assign({}, state, {
         items: {
@@ -47,18 +39,18 @@ const cartreducer = (
       });
     case actionTypes.REDUCE_QUANTITY:
       existingItem = state.items[action.data.id];
-      if (existingItem.quantity === 0) {
-        existingItem.quantity = 0;
+      if (existingItem.cartQuantity === 0) {
+        existingItem.cartQuantity = 0;
       } else {
-        existingItem.quantity--;
+        existingItem.cartQuantity--;
       }
       addToCart(state.items);
       itemsArray = itemsToArray(state.items);
       state.totalPrice = itemsArray
-        .map((item) => item.price * item.quantity)
+        .map((item) => item.price * item.cartQuantity)
         .reduce(reducer);
       state.totalQuantity = itemsArray
-        .map((item) => item.quantity)
+        .map((item) => item.cartQuantity)
         .reduce(reducer);
 
       return Object.assign({}, state, {
@@ -68,15 +60,27 @@ const cartreducer = (
         },
       });
     case actionTypes.REMOVE_PRODUCT:
-      const newstate = delete state.items[action.data];
+      const newState = delete state.items[action.data];
       itemsArray = itemsToArray(state.items);
-      state.totalPrice = itemsArray
-        .map((item) => item.price * item.quantity)
-        .reduce(reducer);
-      state.totalQuantity = itemsArray
-        .map((item) => item.quantity)
-        .reduce(reducer);
-      return { ...state, newstate };
+      if (itemsArray.length) {
+        state.totalPrice = itemsArray
+          .map((item) => item.price * item.cartQuantity)
+          .reduce(reducer);
+        state.totalQuantity = itemsArray
+          .map((item) => item.cartQuantity)
+          .reduce(reducer);
+        return Object.assign({}, state, {
+          ...state,
+          newState,
+        });
+      } else {
+        return {
+          ...state,
+          items: {},
+          totalPrice: 0,
+          totalQuantity: 0,
+        };
+      }
     default:
       return state;
   } //end of switch
