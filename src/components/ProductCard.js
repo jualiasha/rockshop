@@ -1,16 +1,13 @@
 import React from "react";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { useDispatch } from "react-redux";
-import {
-  addProduct,
-  reduceQuantity,
-  removeProduct,
-} from "../store/actions/cartactions";
+import { addProduct, reduceQuantity } from "../store/actions/cartactions";
 import { messages } from "../utils/messages";
 import { addMessage } from "../store/actions/messageactions";
 
 const ProductCard = ({ name, price, amount, src, product }) => {
   const dispatch = useDispatch();
+
   const handleClick = (product) => {
     if (product.quantity === 0) {
       dispatch(addMessage(messages.stock));
@@ -21,11 +18,11 @@ const ProductCard = ({ name, price, amount, src, product }) => {
   return (
     <div className={amount > 0 ? "rock--incart" : "rock"}>
       <h3>{name}</h3>
-      <img src={src} alt={name}></img>
-      <p className="price">{price}€</p>
-      <div className="buttoncontainer">
-        <div className="buttoncontainer__counter">{amount}</div>
-        <div className="buttoncontainer__cart">
+      <img className="rock__img" src={src} alt={name}></img>
+      <p className="rock__price">{price}€</p>
+      <div className="rock__buttoncontainer">
+        <div className="rock__buttoncontainer__counter">{amount}</div>
+        <div className="rock__buttoncontainer__cart">
           <AddShoppingCartIcon
             style={{ fontSize: 30 }}
             onClick={() => handleClick(product)}

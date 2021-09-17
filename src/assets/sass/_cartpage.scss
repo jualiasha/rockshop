@@ -1,0 +1,14 @@
+.cart {
+  background-color: $transplightgrey;
+  border-radius: $borderRadius;
+  -webkit-border-radius: $borderRadius;
+  -moz-border-radius: $borderRadius;
+  -ms-border-radius: $borderRadius;
+  -o-border-radius: $borderRadius;
+  &__image {
+    @extend .rock__img;
+  }
+  &__price {
+    color: $gunmetal;
+  }
+}

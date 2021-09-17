@@ -1,3 +1,5 @@
+import { addToCart, getCart } from "../../services/products";
+
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const REDUCE_QUANTITY = "REDUCE_QUANTITY";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
@@ -26,6 +28,16 @@ export const reduceQuantity = (product) => {
     dispatch({
       type: REDUCE_QUANTITY,
       data: product,
+    });
+  };
+};
+
+export const getfromCart = () => {
+  return async (dispatch) => {
+    const cartproducts = await getCart();
+    dispatch({
+      type: INIT_CART,
+      data: cartproducts,
     });
   };
 };

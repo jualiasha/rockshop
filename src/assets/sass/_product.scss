@@ -2,7 +2,7 @@
   display: block;
   width: 12.5rem;
   height: 17.5rem;
-  background-color: rgba(206, 217, 218, 0.6);
+  background-color: $transplightgrey;
   padding: 2vh 1vw;
   border-radius: $borderRadius;
   margin-right: 2vw;
@@ -13,7 +13,7 @@
     @extend .rock;
     background-color: rgba(206, 217, 218, 1);
   }
-  img {
+  &__img {
     border-radius: $borderRadius;
     -webkit-border-radius: $borderRadius;
     -moz-border-radius: $borderRadius;
@@ -26,11 +26,11 @@
     margin: 0 auto;
   }
 
-  .price {
+  &__price {
     font-weight: 700;
     text-align: center;
   }
-  .buttoncontainer {
+  &__buttoncontainer {
     display: flex;
     justify-content: space-around;
     &__counter {

@@ -1,5 +1,6 @@
 import * as actionTypes from "../actions/cartactions";
 import { reducer, itemsToArray } from "../../utils";
+import { addToCart } from "../../services/products";
 
 const cartreducer = (
   state = { items: {}, totalPrice: 0, totalQuantity: 0 },
@@ -7,6 +8,7 @@ const cartreducer = (
 ) => {
   let existingItem;
   let itemsArray = [];
+
   switch (action.type) {
     case actionTypes.INIT_CART:
       return action.data;
@@ -29,6 +31,7 @@ const cartreducer = (
           existingItem.quantity++;
         }
       }
+      addToCart(state.items);
       itemsArray = itemsToArray(state.items);
       state.totalPrice = itemsArray
         .map((item) => item.price * item.quantity)
@@ -49,6 +52,7 @@ const cartreducer = (
       } else {
         existingItem.quantity--;
       }
+      addToCart(state.items);
       itemsArray = itemsToArray(state.items);
       state.totalPrice = itemsArray
         .map((item) => item.price * item.quantity)

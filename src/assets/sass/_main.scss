@@ -40,7 +40,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-h1,
+
 h2,
 h3,
 h4,
@@ -49,6 +49,7 @@ h6 {
   font-weight: 400;
 }
 h1 {
+  font-weight: 700;
   font-size: 1.6rem;
   text-align: center;
 }
@@ -65,4 +66,12 @@ h3 {
   color: $davysgrey;
   text-transform: uppercase;
   text-align: center;
+}
+
+h4 {
+  font-family: $roboto;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: $davysgrey;
 }

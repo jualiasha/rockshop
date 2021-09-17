@@ -334,6 +334,18 @@
         "description": "Super rock with Lorem Ipsum"
       },
       "id": 8
+    },
+    {
+      "1": {
+        "id": 1,
+        "name": "basalt",
+        "category": "Igneous rocks",
+        "src": "/stones/igneousrocks/basalt.jpg",
+        "price": 5,
+        "quantity": 2,
+        "description": "Super rock with Lorem Ipsum"
+      },
+      "id": 9
     }
   ]
 }
