@@ -19,7 +19,7 @@ const ProductCard = ({ name, price, amount, src, product }) => {
     }
   };
   return (
-    <div className="rock">
+    <div className={amount > 0 ? "rock--incart" : "rock"}>
       <h3>{name}</h3>
       <img src={src} alt={name}></img>
       <p className="price">{price}€</p>

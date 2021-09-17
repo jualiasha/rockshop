@@ -23,8 +23,14 @@ const Header = () => {
           />
         </div>
         <div className="cartbox">
-          <ShoppingCartIcon style={{ fontSize: 40 }} />
-          <div className="counter">{cart.totalQuantity}</div>
+          <ShoppingCartIcon
+            className={
+              cart.totalQuantity > 0
+                ? "cartbox__shoppingcart--withitems"
+                : "cartbox__shoppingcart"
+            }
+          />
+          <div className="cartbox__counter">{cart.totalQuantity}</div>
         </div>
       </div>
       {menuOpen ? <Nav click={menuHandler} /> : null}

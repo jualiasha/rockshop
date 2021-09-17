@@ -12,6 +12,8 @@ body {
   background-image: $backgroundimage;
   background-color: $backgroundcolor;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-y: 40%;
   background-size: 100%;
   color: $black;
   font-family: $roboto;

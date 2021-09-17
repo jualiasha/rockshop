@@ -7,7 +7,15 @@ header {
   }
   .cartbox {
     display: flex;
-    .counter {
+    &__shoppingcart {
+      font-size: 2.8rem;
+
+      &--withitems {
+        color: $lightgrey;
+        font-size: 2.8rem;
+      }
+    }
+    &__counter {
       display: block;
       text-align: center;
       background-color: $white;

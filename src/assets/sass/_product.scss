@@ -9,6 +9,10 @@
   &:hover {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
+  &--incart {
+    @extend .rock;
+    background-color: rgba(206, 217, 218, 1);
+  }
   img {
     border-radius: $borderRadius;
     -webkit-border-radius: $borderRadius;
