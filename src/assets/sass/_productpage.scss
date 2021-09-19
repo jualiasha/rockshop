@@ -1,20 +1,56 @@
 .productpage {
   &__image {
     background-color: $transplightgrey;
+    border-radius: $borderRadius;
+    -webkit-border-radius: $borderRadius;
+    -moz-border-radius: $borderRadius;
+    -ms-border-radius: $borderRadius;
+    -o-border-radius: $borderRadius;
+    padding: 1vh 7vw;
   }
   &__description {
     background-color: $transplightgrey;
+    border-radius: $borderRadius;
+    -webkit-border-radius: $borderRadius;
+    -moz-border-radius: $borderRadius;
+    -ms-border-radius: $borderRadius;
+    -o-border-radius: $borderRadius;
+    margin-left: 2vw;
+    padding: 1vw;
+    &__heading {
+      text-transform: uppercase;
+      text-align: left;
+      margin-bottom: 1vh;
+      color: $charlston;
+      font-family: $courierprime;
+    }
+    &__categoryname {
+      color: $cultured;
+      font-style: italic;
+      font-family: $courierprime;
+    }
+    &__text {
+      margin: 2vh 0;
+    }
+    &__stockitems {
+      font-weight: 600;
+      margin-bottom: 7vh;
+    }
+    &__gobackbutton {
+      cursor: pointer;
+      position: relative;
+      top: 2vh;
+      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+    }
   }
-  &__categoryname {
-    color: $cultured;
-    font-style: italic;
-    font-family: $courierprime;
-  }
-  &__description {
-  }
-  &__stockitems {
-  }
-  &__gobackbutton {
-    cursor: pointer;
+
+  &__buttoncontainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2vw;
   }
 }

@@ -14,6 +14,7 @@ import {
   removeProduct,
   addProduct,
 } from "../store/actions/cartactions";
+import { Link } from "react-router-dom";
 import { messages } from "../utils/messages";
 import { addMessage } from "../store/actions/messageactions";
 
@@ -37,7 +38,14 @@ export default function DenseTable() {
                 align="center"
                 style={{ borderBottom: "1px solid #212529" }}
               >
-                <img src={item.src} alt={item.name} className="cart__image" />
+                <Link
+                  to={{
+                    pathname: `/${item.name.split(" ").join("-")}`,
+                    state: item.id,
+                  }}
+                >
+                  <img src={item.src} alt={item.name} className="cart__image" />
+                </Link>
                 <h4>{item.name}</h4>
                 <h4 className="cart__price">{item.price}€</h4>
               </TableCell>
