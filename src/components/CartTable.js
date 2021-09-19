@@ -15,8 +15,6 @@ import {
   addProduct,
 } from "../store/actions/cartactions";
 import { Link } from "react-router-dom";
-import { messages } from "../utils/messages";
-import { addMessage } from "../store/actions/messageactions";
 
 export default function DenseTable() {
   const cart = useSelector((state) => state.cart);

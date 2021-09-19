@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useHistory, useLocation, useParams } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { Grid, Box } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { ArrowRightAlt, AddShoppingCart } from "@material-ui/icons";
 import { messages } from "../utils/messages";
 import { addMessage } from "../store/actions/messageactions";
-import ProductCard from "../components/ProductCard";
 import { initializeProducts } from "../store/actions/productactions";
 import { addProduct } from "../store/actions/cartactions";
 

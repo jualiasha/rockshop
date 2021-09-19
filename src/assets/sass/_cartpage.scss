@@ -27,4 +27,19 @@
   &__span {
     font-size: 2rem;
   }
+  &__checkoutbutton {
+    display: block;
+    background-color: $buttonbackground;
+    border-radius: $borderRadius;
+    -webkit-border-radius: $borderRadius;
+    -moz-border-radius: $borderRadius;
+    -ms-border-radius: $borderRadius;
+    -o-border-radius: $borderRadius;
+    padding: 2vw;
+    color: $cultured;
+    margin-top: 2vh;
+    font-size: 1.8rem;
+    margin-left: auto;
+    margin-right: 0;
+  }
 }
