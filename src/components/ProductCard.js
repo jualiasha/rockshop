@@ -1,7 +1,7 @@
 import React from "react";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { useDispatch } from "react-redux";
-import { addProduct, reduceQuantity } from "../store/actions/cartactions";
+import { addProduct } from "../store/actions/cartactions";
 import { messages } from "../utils/messages";
 import { addMessage } from "../store/actions/messageactions";
 
@@ -22,11 +22,11 @@ const ProductCard = ({ name, price, amount, src, product }) => {
       <p className="rock__price">{price}€</p>
       <div className="rock__buttoncontainer">
         <div className="rock__buttoncontainer__counter">{amount}</div>
-        <div className="rock__buttoncontainer__cart">
-          <AddShoppingCartIcon
-            style={{ fontSize: 30 }}
-            onClick={() => handleClick(product)}
-          />
+        <div
+          className="rock__buttoncontainer__cart"
+          onClick={() => handleClick(product)}
+        >
+          <AddShoppingCartIcon style={{ fontSize: 30 }} />
         </div>
       </div>
     </div>

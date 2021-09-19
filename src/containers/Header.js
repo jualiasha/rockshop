@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import MenuIcon from "@material-ui/icons/Menu";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { ShoppingCart, Menu } from "@material-ui/icons";
 import Nav from "../components/Nav";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,24 +14,24 @@ const Header = () => {
   return (
     <header>
       <div className="toppanel">
-        <div className="logo">RockShop</div>
+        <Link to="/">
+          <div className="logo">RockShop</div>
+        </Link>
         <div className="menuicon">
-          <MenuIcon
-            style={{ fontSize: 40 }}
-            role="button"
-            onClick={menuHandler}
-          />
+          <Menu style={{ fontSize: 40 }} role="button" onClick={menuHandler} />
         </div>
-        <div className="cartbox">
-          <ShoppingCartIcon
-            className={
-              cart.totalQuantity > 0
-                ? "cartbox__shoppingcart--withitems"
-                : "cartbox__shoppingcart"
-            }
-          />
-          <div className="cartbox__counter">{cart.totalQuantity}</div>
-        </div>
+        <Link to="/cart">
+          <div className="cartbox">
+            <ShoppingCart
+              className={
+                cart.totalQuantity > 0
+                  ? "cartbox__shoppingcart--withitems"
+                  : "cartbox__shoppingcart"
+              }
+            />
+            <div className="cartbox__counter">{cart.totalQuantity}</div>
+          </div>
+        </Link>
       </div>
       {menuOpen ? <Nav click={menuHandler} /> : null}
     </header>

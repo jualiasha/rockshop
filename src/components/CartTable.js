@@ -1,5 +1,5 @@
 import * as React from "react";
-import { DeleteForever } from "@material-ui/icons";
+import { DeleteForever, Payment } from "@material-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
 import {
   Table,
@@ -23,14 +23,6 @@ export default function DenseTable() {
 
   let itemsArray = [];
   itemsArray = itemsToArray(cart.items);
-
-  const handlePlusClick = (product) => {
-    if (product.quantity === 0) {
-      dispatch(addMessage(messages.stock));
-    } else {
-      dispatch(addProduct(product));
-    }
-  };
 
   return (
     <TableContainer>
@@ -87,12 +79,41 @@ export default function DenseTable() {
                 style={{ borderBottom: "1px solid #212529" }}
               >
                 <DeleteForever
-                  style={{ fontSize: 40 }}
+                  style={{ fontSize: 40, cursor: "pointer" }}
                   onClick={() => dispatch(removeProduct(item.id))}
                 />
               </TableCell>
             </TableRow>
           ))}
+          <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+            <TableCell
+              style={{ borderBottom: "1px solid #212529" }}
+            ></TableCell>
+            <TableCell
+              align="center"
+              style={{ borderBottom: "1px solid #212529" }}
+            >
+              <span className="cart__span">Total amount</span>
+            </TableCell>
+            <TableCell
+              align="center"
+              style={{ borderBottom: "1px solid #212529" }}
+            >
+              <span className="cart__span">{cart.totalQuantity}</span>
+            </TableCell>
+            <TableCell
+              align="center"
+              style={{ borderBottom: "1px solid #212529" }}
+            >
+              <Payment
+                style={{ fontSize: 40, position: "relative", top: "1vh" }}
+              />
+              <span className="cart__span">{cart.totalPrice}€</span>
+            </TableCell>
+            <TableCell
+              style={{ borderBottom: "1px solid #212529" }}
+            ></TableCell>
+          </TableRow>
         </TableBody>
       </Table>
     </TableContainer>
