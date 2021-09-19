@@ -248,6 +248,16 @@
       "quantity": 120,
       "description": "Super rock with Lorem Ipsum",
       "cartQuantity": 1
+    },
+    "2": {
+      "id": 2,
+      "name": "gabbro",
+      "category": "Igneous rocks",
+      "src": "/stones/igneousrocks/gabbro.jpg",
+      "price": 5,
+      "quantity": 100,
+      "description": "Super rock with Lorem Ipsum",
+      "cartQuantity": 1
     }
   }
 }

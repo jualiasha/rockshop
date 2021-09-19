@@ -60,6 +60,7 @@ const Home = () => {
                       }
                       src={product.src}
                       product={product}
+                      id={product.id}
                     />
                   )}
                 </Grid>

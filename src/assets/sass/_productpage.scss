@@ -1,0 +1,20 @@
+.productpage {
+  &__image {
+    background-color: $transplightgrey;
+  }
+  &__description {
+    background-color: $transplightgrey;
+  }
+  &__categoryname {
+    color: $cultured;
+    font-style: italic;
+    font-family: $courierprime;
+  }
+  &__description {
+  }
+  &__stockitems {
+  }
+  &__gobackbutton {
+    cursor: pointer;
+  }
+}
