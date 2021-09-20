@@ -1,27 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ProductCard from "../components/ProductCard";
 
 import { Grid, Typography, Box } from "@material-ui/core";
-import { useSelector, useDispatch } from "react-redux";
-import { initializeProducts } from "../store/actions/productactions";
+import { useSelector } from "react-redux";
 
 const Home = () => {
   const products = useSelector((state) => state.products);
   const cart = useSelector((state) => state.cart);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(initializeProducts());
-  }, [dispatch]);
-  /* const [products, setProducts] = useState();
-
-  useEffect(() => {
-    if (!products) {
-      axios
-        .get("http://localhost:3001/rocks")
-        .then((response) => setProducts(response.data));
-    }
-  }, [products, setProducts]); */
 
   let productdata = undefined;
 

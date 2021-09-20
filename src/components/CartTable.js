@@ -39,7 +39,7 @@ export default function DenseTable() {
                 <Link
                   to={{
                     pathname: `/${item.name.split(" ").join("-")}`,
-                    state: item.id,
+                    state: { id: item.id },
                   }}
                 >
                   <img src={item.src} alt={item.name} className="cart__image" />

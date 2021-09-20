@@ -247,7 +247,7 @@
       "price": 5,
       "quantity": 120,
       "description": "Super rock with Lorem Ipsum",
-      "cartQuantity": 2
+      "cartQuantity": 1
     }
   }
 }

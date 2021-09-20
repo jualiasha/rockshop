@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "./containers/Header";
 import Footer from "./containers/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -6,8 +7,15 @@ import Home from "./pages/Home";
 import Rocks from "./pages/Rocks";
 import Cart from "./pages/Cart";
 import ProductPage from "./pages/ProductPage";
+import { initializeProducts } from "./store/actions/productactions";
+import { useDispatch } from "react-redux";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(initializeProducts());
+  }, [dispatch]);
+
   return (
     <Router>
       <Header />

@@ -1,4 +1,4 @@
-import { addToCart, getCart } from "../../services/products";
+import { getCart } from "../../services/products";
 
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const REDUCE_QUANTITY = "REDUCE_QUANTITY";
