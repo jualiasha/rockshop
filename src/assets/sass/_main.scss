@@ -19,8 +19,10 @@ body {
   font-family: $roboto;
   font-size: 1.25rem;
 }
+main {
+  padding: 15vh 2vw 2vw 2vw;
+}
 
-main,
 footer {
   padding: 2vw;
 }

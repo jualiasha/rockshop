@@ -4,6 +4,11 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 2vw;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
   }
   .cartbox {
     display: flex;
@@ -44,6 +49,7 @@ header {
     -moz-border-radius: $borderRadius;
     -ms-border-radius: $borderRadius;
     -o-border-radius: $borderRadius;
+    cursor: pointer;
   }
 }
 
@@ -51,7 +57,7 @@ nav {
   background-color: $cultured;
   max-width: 96%;
   padding: 2vh 0;
-  position: absolute;
+  position: fixed;
   top: 11vh;
   left: 2vw;
   width: 100%;
@@ -61,6 +67,7 @@ nav {
   -ms-border-radius: $borderRadius;
   -o-border-radius: $borderRadius;
   opacity: 0.9;
+  z-index: 10;
   li {
     display: inline-block;
     margin-left: 2vw;

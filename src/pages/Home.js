@@ -1,35 +1,79 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
-
-import { Grid, Typography, Box } from "@material-ui/core";
+import SimpleBackdrop from "../components/Backdrop";
+import { Grid, Typography, Box, Zoom } from "@material-ui/core";
 import { useSelector } from "react-redux";
 
 const Home = () => {
-  const products = useSelector((state) => state.products);
+  const productsState = useSelector((state) => state.products);
+  const [products, setProducts] = useState(() => productsState);
   const cart = useSelector((state) => state.cart);
 
-  let productdata = undefined;
+  useEffect(() => {
+    if (productsState.length) {
+      setProducts(() => productsState);
+    }
+  }, [productsState, setProducts]);
 
-  !products
-    ? (productdata = <h1>Loading...</h1>)
-    : (productdata = (
+  /* if (products) {
+    const categoryfilter = products.filter((product) => {
+      return product.category
+        .toLocaleLowerCase()
+        .includes(categories.igneousRocks.toLocaleLowerCase());
+    });
+  } */
+
+  const filterCategoryHandler = (categoryName) => {
+    const filteredProducts = products.filter((product) => {
+      /* console.log(product?.category == categoryName); */
+      return product.productCategory
+        ? product.productCategory === categoryName
+        : product?.category === categoryName;
+    });
+    setProducts(filteredProducts);
+  };
+
+  const allProductsHandler = () => {
+    setProducts(() => productsState);
+  };
+  console.log(productsState);
+  /* const categoryfilter = products.filter((product) => {
+    return product.category.toLocaleLowerCase().includes("hello")
+  }) */
+
+  return (
+    <div className="homepage">
+      {/* <ul>
+        <li>Igneous Rocks</li>
+        <li>Metamorphic Rocks</li>
+        <li>Minerals</li>
+        <li>Sedimentary Rocks</li>
+      </ul> */}
+      {!products?.length ? (
+        <SimpleBackdrop />
+      ) : (
         <Grid container justifyContent="center" alignItems="center">
-          {products?.length &&
-            products.map((product) => {
-              return (
-                <Grid
-                  item
-                  xs={6}
-                  sm={4}
-                  md={3}
-                  lg={2}
-                  key={product.id || product.productCategory}
-                >
-                  <Box my={2} />
+          {products.map((product) => {
+            return (
+              <Zoom in={true} key={product.id || product.productCategory}>
+                <Grid item xs={6} sm={4} md={3} lg={2}>
+                  <Box
+                    my={2}
+                    id={product.productCategory
+                      ?.split(" ")
+                      .join("")
+                      .toLowerCase()}
+                  />
                   {product.productCategory ? (
                     <Grid container alignItems="center" justifyContent="center">
                       <Grid item xs={12}>
-                        <Typography variant="h2">
+                        <Typography
+                          variant="h2"
+                          style={{ cursor: "pointer" }}
+                          onClick={() =>
+                            filterCategoryHandler(product.productCategory)
+                          }
+                        >
                           {product.productCategory}
                         </Typography>
                       </Grid>
@@ -49,12 +93,22 @@ const Home = () => {
                     />
                   )}
                 </Grid>
-              );
-            })}
+              </Zoom>
+            );
+          })}
+          <Grid item xs={6} sm={4} md={3} lg={2}>
+            <Typography
+              variant="h2"
+              style={{ cursor: "pointer" }}
+              onClick={() => allProductsHandler()}
+            >
+              ALL
+            </Typography>
+          </Grid>
         </Grid>
-      ));
-
-  return <>{productdata}</>;
+      )}
+    </div>
+  );
 };
 
 export default Home;

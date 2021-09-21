@@ -6,7 +6,7 @@
     {
       "id": 1,
       "name": "basalt",
-      "category": "Igneous rocks",
+      "category": "Igneous Rocks",
       "src": "/stones/igneousrocks/basalt.jpg",
       "price": 5,
       "quantity": 120,
@@ -15,7 +15,7 @@
     {
       "id": 2,
       "name": "gabbro",
-      "category": "Igneous rocks",
+      "category": "Igneous Rocks",
       "src": "/stones/igneousrocks/gabbro.jpg",
       "price": 5,
       "quantity": 100,
@@ -24,7 +24,7 @@
     {
       "id": 3,
       "name": "granite",
-      "category": "Igneous rocks",
+      "category": "Igneous Rocks",
       "src": "/stones/igneousrocks/granite.jpg",
       "price": 5,
       "quantity": 50,
@@ -33,7 +33,7 @@
     {
       "id": 4,
       "name": "obsidian",
-      "category": "Igneous rocks",
+      "category": "Igneous Rocks",
       "src": "/stones/igneousrocks/obsidian.jpg",
       "price": 5,
       "quantity": 20,
@@ -42,7 +42,7 @@
     {
       "id": 5,
       "name": "pumice",
-      "category": "Igneous rocks",
+      "category": "Igneous Rocks",
       "src": "/stones/igneousrocks/pumice.jpg",
       "price": 5,
       "quantity": 70,
@@ -54,7 +54,7 @@
     {
       "id": 6,
       "name": "gneiss",
-      "category": "Metamorphic rocks",
+      "category": "Metamorphic Rocks",
       "src": "/stones/metamorphicrocks/gneiss.jpg",
       "price": 5,
       "quantity": 10,
@@ -63,7 +63,7 @@
     {
       "id": 7,
       "name": "marble",
-      "category": "Metamorphic rocks",
+      "category": "Metamorphic Rocks",
       "src": "/stones/metamorphicrocks/marble.jpg",
       "price": 5,
       "quantity": 10,
@@ -72,7 +72,7 @@
     {
       "id": 8,
       "name": "metaquartzite",
-      "category": "Metamorphic rocks",
+      "category": "Metamorphic Rocks",
       "src": "/stones/metamorphicrocks/metaquartzite.jpg",
       "price": 5,
       "quantity": 10,
@@ -81,7 +81,7 @@
     {
       "id": 9,
       "name": "schist",
-      "category": "Metamorphic rocks",
+      "category": "Metamorphic Rocks",
       "src": "/stones/metamorphicrocks/schist.jpg",
       "price": 5,
       "quantity": 10,
@@ -90,7 +90,7 @@
     {
       "id": 10,
       "name": "slate",
-      "category": "Metamorphic rocks",
+      "category": "Metamorphic Rocks",
       "src": "/stones/metamorphicrocks/slate.jpg",
       "price": 5,
       "quantity": 10,
@@ -239,13 +239,13 @@
     }
   ],
   "cart": {
-    "1": {
-      "id": 1,
-      "name": "basalt",
-      "category": "Igneous rocks",
-      "src": "/stones/igneousrocks/basalt.jpg",
+    "2": {
+      "id": 2,
+      "name": "gabbro",
+      "category": "Igneous Rocks",
+      "src": "/stones/igneousrocks/gabbro.jpg",
       "price": 5,
-      "quantity": 120,
+      "quantity": 100,
       "description": "Super rock with Lorem Ipsum",
       "cartQuantity": 1
     }
