@@ -1,0 +1,32 @@
+footer {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    &__logo {
+      color: $cultured;
+      font-weight: 700;
+      font-family: $courierprime;
+      font-size: 2rem;
+    }
+    &__menu {
+      color: $cultured;
+      font-family: $courierprime;
+
+      ul {
+        font-size: 2rem;
+        li {
+          margin-bottom: 1.5vh;
+          font-size: 1.3rem;
+          &:first-child {
+            margin-top: 1.5vh;
+          }
+        }
+      }
+    }
+    &__copywrite {
+      text-align: center;
+      font-size: 1rem;
+      color: $cultured;
+    }
+  }
+}
