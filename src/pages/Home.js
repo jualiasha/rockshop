@@ -99,7 +99,7 @@ const Home = () => {
           <Grid item xs={6} sm={4} md={3} lg={2}>
             <Typography
               variant="h2"
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer", textDecoration: "underline" }}
               onClick={() => allProductsHandler()}
             >
               ALL
