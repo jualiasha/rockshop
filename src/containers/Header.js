@@ -5,11 +5,11 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); //open /close hamburger menu
   const menuHandler = () => {
     setMenuOpen(!menuOpen);
   };
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.cart); //cart state from redux
 
   return (
     <header>

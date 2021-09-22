@@ -13,20 +13,26 @@ const ProductPage = () => {
   let location = useLocation();
   /*defining previous page for "go back" button*/
   let history = useHistory();
+  //data that renders
   let productdata = undefined;
+  //products from redux state
   const products = useSelector((state) => state.products);
+  //cart from redux state
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  //product that renders on the page
   const [product, setProduct] = useState(() => null);
+  //product is already in cart
   const [cartProduct, setCartProduct] = useState({});
 
   useEffect(() => {
+    //find produc from redux products
     if (products.length) {
       const foundProduct = products.find(
         (prod) => prod.id === location.state.id
       );
       setProduct(() => foundProduct);
-
+        // check if product is in cart already
       setCartProduct(
         cart.items[foundProduct.id] === undefined
           ? {}
@@ -35,6 +41,7 @@ const ProductPage = () => {
     }
   }, [product, setProduct, products, cart.items, location.state.id]);
   const handleClick = (product) => {
+    //check if the product is in stock before add to cart
     if (product.quantity === 0) {
       dispatch(addMessage(messages.stock));
     } else {

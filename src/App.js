@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "./containers/Header";
-import Footer from "./containers/Footer";
+import Footer from "./components/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";

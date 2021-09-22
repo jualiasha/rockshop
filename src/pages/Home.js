@@ -1,31 +1,24 @@
 import React, { useEffect, useState } from "react";
-import ProductCard from "../components/ProductCard";
-import SimpleBackdrop from "../components/Backdrop";
+import ProductCard from "../containers/ProductCard";
+import SimpleBackdrop from "../containers/Backdrop";
 import { Grid, Typography, Box, Zoom } from "@material-ui/core";
 import { useSelector } from "react-redux";
 
 const Home = () => {
-  const productsState = useSelector((state) => state.products);
-  const [products, setProducts] = useState(() => productsState);
-  const cart = useSelector((state) => state.cart);
+  const productsState = useSelector((state) => state.products); //products from redux
+  const [products, setProducts] = useState(() => productsState); // state for filtering products by categories
+  const cart = useSelector((state) => state.cart); // cart state from redux
 
   useEffect(() => {
+    // initial state of products from redux
     if (productsState.length) {
       setProducts(() => productsState);
     }
   }, [productsState, setProducts]);
 
-  /* if (products) {
-    const categoryfilter = products.filter((product) => {
-      return product.category
-        .toLocaleLowerCase()
-        .includes(categories.igneousRocks.toLocaleLowerCase());
-    });
-  } */
-
   const filterCategoryHandler = (categoryName) => {
+    //filtering products by category on click
     const filteredProducts = products.filter((product) => {
-      /* console.log(product?.category == categoryName); */
       return product.productCategory
         ? product.productCategory === categoryName
         : product?.category === categoryName;
@@ -34,21 +27,12 @@ const Home = () => {
   };
 
   const allProductsHandler = () => {
+    //show initial product state
     setProducts(() => productsState);
   };
-  console.log(productsState);
-  /* const categoryfilter = products.filter((product) => {
-    return product.category.toLocaleLowerCase().includes("hello")
-  }) */
 
   return (
     <div className="homepage">
-      {/* <ul>
-        <li>Igneous Rocks</li>
-        <li>Metamorphic Rocks</li>
-        <li>Minerals</li>
-        <li>Sedimentary Rocks</li>
-      </ul> */}
       {!products?.length ? (
         <SimpleBackdrop />
       ) : (

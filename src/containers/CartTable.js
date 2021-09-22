@@ -17,11 +17,11 @@ import {
 import { Link } from "react-router-dom";
 
 export default function DenseTable() {
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.cart); //cart state
   const dispatch = useDispatch();
 
   let itemsArray = [];
-  itemsArray = itemsToArray(cart.items);
+  itemsArray = itemsToArray(cart.items); //convert object to array
 
   return (
     <TableContainer>

@@ -10,7 +10,7 @@ const ProductCard = ({ name, price, amount, src, product, id }) => {
   const dispatch = useDispatch();
 
   const handleClick = (product) => {
-    /* event.stopPropagation(); */
+    //check if there are this products in stock
     if (product.quantity === 0) {
       dispatch(addMessage(messages.stock));
     } else {

@@ -239,6 +239,16 @@
     }
   ],
   "cart": {
+    "1": {
+      "id": 1,
+      "name": "basalt",
+      "category": "Igneous Rocks",
+      "src": "/stones/igneousrocks/basalt.jpg",
+      "price": 5,
+      "quantity": 120,
+      "description": "Super rock with Lorem Ipsum",
+      "cartQuantity": 1
+    },
     "2": {
       "id": 2,
       "name": "gabbro",
@@ -247,7 +257,17 @@
       "price": 5,
       "quantity": 100,
       "description": "Super rock with Lorem Ipsum",
-      "cartQuantity": 1
+      "cartQuantity": 8
+    },
+    "3": {
+      "id": 3,
+      "name": "granite",
+      "category": "Igneous Rocks",
+      "src": "/stones/igneousrocks/granite.jpg",
+      "price": 5,
+      "quantity": 50,
+      "description": "Super rock with Lorem Ipsum",
+      "cartQuantity": 10
     }
   }
 }

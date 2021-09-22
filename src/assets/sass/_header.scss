@@ -72,5 +72,11 @@ nav {
     display: inline-block;
     margin-left: 2vw;
     font-family: $courierprime;
+    &:hover {
+      text-decoration: underline;
+    }
+    .active {
+      text-decoration: underline;
+    }
   }
 }

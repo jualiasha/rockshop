@@ -1,10 +1,11 @@
 import React from "react";
-import CartTable from "../components/CartTable";
+import CartTable from "../containers/CartTable";
 
 import { Grid } from "@material-ui/core";
 
 const Cart = () => {
   const handleClick = () => {
+    //option to add payment logic instead of alert
     alert("Thank you!");
   };
 
