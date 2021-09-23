@@ -6,6 +6,7 @@
   -ms-border-radius: $borderRadius;
   -o-border-radius: $borderRadius;
   padding: 1vw;
+  z-index: 6;
   &__image {
     @extend .rock__img;
   }

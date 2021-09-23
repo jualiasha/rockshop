@@ -1,12 +1,16 @@
 import React from "react";
 import CartTable from "../containers/CartTable";
+import { useDispatch } from "react-redux";
+import { messages } from "../utils/messages";
+import { addMessage } from "../store/actions/messageactions";
 
 import { Grid } from "@material-ui/core";
 
 const Cart = () => {
+  const dispatch = useDispatch();
   const handleClick = () => {
-    //option to add payment logic instead of alert
-    alert("Thank you!");
+    //option to add payment logic instead of success message
+    dispatch(addMessage({ messageText: messages.success, bgColor: "success" }));
   };
 
   return (

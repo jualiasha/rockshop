@@ -15,6 +15,8 @@ import {
   addProduct,
 } from "../store/actions/cartactions";
 import { Link } from "react-router-dom";
+import { addMessage } from "../store/actions/messageactions";
+import { messages } from "../utils/messages";
 
 export default function DenseTable() {
   const cart = useSelector((state) => state.cart); //cart state
@@ -22,6 +24,14 @@ export default function DenseTable() {
 
   let itemsArray = [];
   itemsArray = itemsToArray(cart.items); //convert object to array
+
+  const reduceQuantityHandler = (item) => {
+    if (item.cartQuantity === 0) {
+      dispatch(addMessage({ messageText: messages.zero, bgColor: "warning" }));
+    } else {
+      dispatch(reduceQuantity(item));
+    }
+  };
 
   return (
     <TableContainer>
@@ -69,7 +79,7 @@ export default function DenseTable() {
                 <button
                   className="cart__button"
                   type="button"
-                  onClick={() => dispatch(reduceQuantity(item))}
+                  onClick={() => reduceQuantityHandler(item)}
                 >
                   -
                 </button>

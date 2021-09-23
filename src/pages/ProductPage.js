@@ -32,7 +32,7 @@ const ProductPage = () => {
         (prod) => prod.id === location.state.id
       );
       setProduct(() => foundProduct);
-        // check if product is in cart already
+      // check if product is in cart already
       setCartProduct(
         cart.items[foundProduct.id] === undefined
           ? {}
@@ -43,7 +43,7 @@ const ProductPage = () => {
   const handleClick = (product) => {
     //check if the product is in stock before add to cart
     if (product.quantity === 0) {
-      dispatch(addMessage(messages.stock));
+      dispatch(addMessage({ messageText: messages.stock, bgColor: "danger" }));
     } else {
       dispatch(addProduct(product));
     }

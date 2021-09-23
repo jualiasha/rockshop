@@ -1,6 +1,10 @@
 import { ADD_MESSAGE, REMOVE_MESSAGE } from "../actions/messageactions";
 
-const messageReducer = (state = { message: "", bgColor: "" }, action) => {
+const DEFAULT_STATE = {
+  message: { messageText: "", bgColor: "" },
+};
+
+const messageReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case ADD_MESSAGE:
       return {

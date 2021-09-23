@@ -12,7 +12,7 @@ const ProductCard = ({ name, price, amount, src, product, id }) => {
   const handleClick = (product) => {
     //check if there are this products in stock
     if (product.quantity === 0) {
-      dispatch(addMessage(messages.stock));
+      dispatch(addMessage({ messageText: messages.stock, bgColor: "danger" }));
     } else {
       dispatch(addProduct(product));
     }

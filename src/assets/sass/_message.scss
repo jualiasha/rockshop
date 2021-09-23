@@ -1,0 +1,52 @@
+.message-container {
+  position: fixed;
+  top: 4rem;
+  z-index: 4006;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  animation: fade-in 1s ease-in forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.MuiGrid-item {
+  width: 100%;
+  display: block;
+}
+.MuiSnackbarContent-root .message {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  line-height: 1em;
+  letter-spacing: 1.1px;
+}
+.MuiSnackbarContent-root.success {
+  background-color: #366d38d1;
+}
+
+.MuiSnackbarContent-root.danger {
+  background-color: #863939d1;
+}
+
+.MuiSnackbarContent-root.warning {
+  background-color: #bda67af2;
+}
+
+.MuiSnackbarContent-root.info {
+  background-color: #3b76d1;
+}
+
+.MuiSnackbarContent-root .icon {
+  opacity: 0.9;
+  // font-size: 2rem;
+  margin: 0.5rem;
+}

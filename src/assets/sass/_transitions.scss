@@ -41,13 +41,13 @@
   }
   &:nth-child(4) {
     left: 58vw;
-    animation: fall 2s linear 3s infinite normal;
-    -webkit-animation: fall 2s linear 3s infinite normal;
+    animation: fall 2s linear 4s infinite normal;
+    -webkit-animation: fall 2s linear 4s infinite normal;
   }
   &:nth-child(5) {
     left: 60vw;
-    animation: fall 2.5s linear 3.5s infinite normal;
-    -webkit-animation: fall 2.5s linear 3.5s infinite normal;
+    animation: fall 2.5s linear 5s infinite normal;
+    -webkit-animation: fall 2.5s linear 5s infinite normal;
   }
 }
 
