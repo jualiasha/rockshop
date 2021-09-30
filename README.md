@@ -1,5 +1,7 @@
 # School Project e-commerce web shop
 
+[![CI-rockshop](https://github.com/jualiasha/rockshop/actions/workflows/main.yml/badge.svg)](https://github.com/jualiasha/rockshop/actions/workflows/main.yml)
+
 Nice practice to make a web shop and shopping cart.
 
 ## Name: Rock Shop
@@ -16,8 +18,8 @@ Not ready yet
 - Redux
 - yarn library
 - JavaScript
-- Node express js
-- React Bootstrap
+- Json Server
+- Material UI
 - HTML
 - SASS
 
